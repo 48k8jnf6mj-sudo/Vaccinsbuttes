@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b7a5a"><meta name="description" content="Questionnaire vaccinal anonyme – Pharmacie des Buttes, Nuits-Saint-Georges"><title>Vaccins – Pharmacie des Buttes, Nuits-Saint-Georges</title>
+<style>
+:root{--bg:#faf7f2;--card:#fff;--tx:#1f2a2e;--mut:#5f6e72;--bd:#e3ddd0;--ac:#0b7a5a;--ac2:#e3f5ec;--wine:#7a1f3d;--wa:#fff4dc;--wab:#b7791f;--ko:#fde8e8;--kob:#c0392b;--dr:#e8f0fe;--drb:#3567c4;--dn:#f0ede6;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131a1b;--card:#1b2527;--tx:#e8eeee;--mut:#9fb0b2;--bd:#2c3b3d;--ac:#3ecf9e;--ac2:#12332a;--wine:#e08aa3;--wa:#3a2f12;--wab:#e5b04d;--ko:#3a1a1a;--kob:#ef7b6e;--dr:#17233d;--drb:#7aa2f0;--dn:#222d2f}}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+.hero{position:relative;background:linear-gradient(135deg,#064d3a,#0b7a5a 60%,#2f8f69);color:#fff;padding:calc(18px + env(safe-area-inset-top,0px)) 20px 70px;text-align:center}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;text-align:left;max-width:620px;margin:0 auto 18px}
+.logo{width:50px;height:50px;flex:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+.ph{font:700 1.25rem Georgia,"Times New Roman",serif;letter-spacing:.2px}.loc{font-size:.85rem;opacity:.9}
+.hero h1{font:700 1.7rem/1.2 Georgia,"Times New Roman",serif;margin:0 auto 6px;max-width:520px}.hero p{margin:0;opacity:.92;font-size:.98rem}
+.hills{position:absolute;left:0;bottom:-1px;width:100%;height:46px;display:block}
+main{max-width:620px;margin:-8px auto 0;padding:0 16px 24px}
+.prog{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0 4px}#bar{height:100%;background:linear-gradient(90deg,var(--ac),var(--wine));width:0;transition:width .3s}
+#pn{font-size:.85rem;color:var(--mut);margin-bottom:6px;min-height:1.2em}
+.card{background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--wine);border-radius:14px;padding:18px;margin:10px 0;box-shadow:0 2px 10px rgba(60,40,20,.06)}
+h2{font:700 1.2rem Georgia,"Times New Roman",serif;color:var(--wine);margin:0 0 4px}.hint{color:var(--mut);font-size:.9rem;margin:0 0 10px}
+.f{margin:12px 0}.f>label{display:block;font-weight:600;margin-bottom:5px}
+input[type=number],select{font:inherit;width:100%;box-sizing:border-box;padding:12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx)}
+.ck{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;margin:7px 0;cursor:pointer;background:var(--bg)}
+.ck input{width:22px;height:22px;margin-top:1px;accent-color:var(--ac);flex:none}.ck small{display:block;color:var(--mut)}
+ul.pts{list-style:none;padding:0;margin:12px 0}ul.pts li{padding:5px 0 5px 30px;position:relative}ul.pts li:before{content:"✔";position:absolute;left:0;color:var(--ac);font-weight:700}
+.nav{display:flex;gap:10px;margin-top:14px}
+button{font:inherit;font-weight:600;flex:1;padding:14px;border:0;border-radius:12px;background:var(--ac);color:#fff;cursor:pointer}
+button.sec{background:var(--dn);color:var(--tx);border:1px solid var(--bd)}
+.err{color:var(--kob);font-size:.9rem;min-height:1.2em}
+.g{margin:18px 0 6px;font-size:1.05rem;font-weight:700}
+.v{border-left:6px solid;border-radius:10px;padding:11px 13px;margin:8px 0}.v b{display:block;font-size:1.02rem}.v span{font-size:.92rem;color:var(--mut)}
+.why{margin:7px 0 0;font-size:.92rem;color:var(--tx)}
+.ok{background:var(--ac2);border-color:var(--ac)}.wa{background:var(--wa);border-color:var(--wab)}.dr{background:var(--dr);border-color:var(--drb)}.ko{background:var(--ko);border-color:var(--kob)}.dn{background:var(--dn);border-color:var(--bd)}
+.al{background:var(--wa);border:1px solid var(--wab);border-radius:10px;padding:10px 13px;margin:8px 0;font-size:.93rem}
+.legal{margin-top:22px;font-size:.85rem;color:var(--mut)}
+.legal details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin:8px 0}
+.legal summary{cursor:pointer;font-weight:600;color:var(--tx)}.legal p,.legal li{margin:8px 0}.legal ul{padding-left:20px;margin:6px 0}
+.sig{text-align:center;margin-top:18px;font-size:.8rem;color:var(--mut)}
+@media print{.hills,.legal,.prog,#pn,.nav,.sig,.hero p,.hero h1{display:none}.hero{background:none;color:#000;padding:0 0 10px}body{background:#fff;color:#000}.card{border:0;box-shadow:none;padding:0}}
+</style></head><body><header class="hero"><div class="brand"><svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Croix de pharmacie"><rect width="48" height="48" rx="12" fill="#fff"/><path d="M20 9h8v11h11v8H28v11h-8V28H9v-8h11z" fill="#0b7a5a"/></svg><div><div class="ph">Pharmacie des Buttes</div><div class="loc">Nuits-Saint-Georges · Côte-d'Or</div></div></div><h1>Faites le point sur vos vaccins</h1><p>Questionnaire gratuit, anonyme, 5 minutes.</p><svg class="hills" viewBox="0 0 600 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V28Q70 4 150 24T310 20 470 30 600 12V46z" fill="var(--bg)"/></svg></header>
+<main>
+<div class="card step" data-s="0"><h2>Bienvenue 👋</h2><p>En quelques questions, découvrez les vaccins que votre pharmacien peut prescrire et réaliser ici, à Nuits-Saint-Georges, selon votre âge et votre situation.</p><ul class="pts"><li>Gratuit, sans inscription</li><li>Anonyme : vos réponses ne quittent pas votre appareil</li><li>Un résultat à montrer au pharmacien, avec des conseils</li></ul><div class="nav"><button onclick="show(1)">Commencer</button></div><p class="hint" style="margin-top:12px">🔒 <a href="#rgpd" onclick="$('rgpd').open=true" style="color:inherit">Protection de vos données</a></p></div>
+<div class="prog"><div id="bar"></div></div><div id="pn"></div>
+
+<div class="card step" data-s="1"><h2>Vous</h2><p class="hint">Si c'est pour votre enfant, répondez pour lui.</p>
+<div class="f"><label for="age">Âge de la personne à vacciner</label><input id="age" type="number" min="0" max="120" inputmode="numeric" oninput="upd()"></div>
+<div class="f"><label for="sex">Sexe</label><select id="sex" onchange="upd()"><option value="F">Femme / fille</option><option value="M">Homme / garçon</option></select></div>
+<div class="f" id="pb" hidden><label for="preg">Êtes-vous enceinte ?</label><select id="preg"><option value="non">Non</option><option value="oui">Oui</option><option value="nsp">Je ne sais pas / possible</option></select></div>
+<div class="err" id="e1"></div></div>
+
+<div class="card step" data-s="2" hidden><h2>Votre santé</h2><p class="hint">Cochez ce qui vous concerne (rien à cocher : passez à la suite).</p>
+<label class="ck"><input type="checkbox" id="imm"><span>Défenses immunitaires affaiblies<small>chimiothérapie, greffe, VIH, corticoïdes au long cours, traitement immunosuppresseur ou biothérapie</small></span></label>
+<label class="ck"><input type="checkbox" id="resp"><span>Maladie respiratoire chronique<small>asthme, BPCO, insuffisance respiratoire</small></span></label>
+<label class="ck"><input type="checkbox" id="card"><span>Maladie du cœur ou des vaisseaux</span></label>
+<label class="ck"><input type="checkbox" id="diab"><span>Diabète</span></label>
+<label class="ck"><input type="checkbox" id="kid"><span>Maladie des reins ou du foie</span></label>
+<label class="ck"><input type="checkbox" id="obes"><span>Obésité importante<small>IMC de 40 ou plus</small></span></label>
+<label class="ck"><input type="checkbox" id="aspl"><span>Pas de rate, ou rate qui ne fonctionne pas</span></label>
+<h2 style="margin-top:18px">Avant la piqûre</h2>
+<label class="ck"><input type="checkbox" id="fever"><span>Fièvre ou maladie aiguë aujourd'hui</span></label>
+<label class="ck"><input type="checkbox" id="allergy"><span>Allergie grave déjà survenue après un vaccin, ou à un composant de vaccin</span></label>
+<label class="ck"><input type="checkbox" id="anti"><span>Traitement anticoagulant ou trouble de la coagulation</span></label></div>
+
+<div class="card step" data-s="3" hidden><h2>Votre quotidien</h2><p class="hint">Cochez ce qui vous concerne.</p>
+<label class="ck"><input type="checkbox" id="hcw"><span>Je travaille en contact avec des patients<small>soignant, aide-soignant, étudiant en santé, aide à domicile…</small></span></label>
+<label class="ck"><input type="checkbox" id="ent"><span>Je vis avec ou je m'occupe d'une personne fragile<small>immunodéprimée ou nourrisson</small></span></label>
+<label class="ck"><input type="checkbox" id="exp"><span>Partenaires sexuels multiples, rapports entre hommes, ou usage de drogues</span></label>
+<label class="ck"><input type="checkbox" id="trip"><span>Je prépare un voyage à l'étranger</span></label></div>
+
+<div class="card step" data-s="4" hidden><h2>Vos vaccins déjà faits</h2><p class="hint">Regardez votre carnet ou Mon espace santé si possible. En cas de doute, choisissez « Je ne sais pas ».</p>
+<div class="f"><label for="dtp">Dernier rappel diphtérie-tétanos-polio</label><select id="dtp"><option value="nsp">Je ne sais pas</option><option value="5">Il y a moins de 5 ans</option><option value="10">Il y a 5 à 10 ans</option><option value="10p">Il y a plus de 10 ans</option></select></div>
+<div class="f"><label for="ror">Rougeole-oreillons-rubéole (ROR)</label><select id="ror"><option value="nsp">Je ne sais pas</option><option value="2">2 doses faites</option><option value="1">1 dose seulement</option><option value="0">Aucune</option></select></div>
+<div class="f"><label for="var">Varicelle</label><select id="var"><option value="nsp">Je ne sais pas</option><option value="y">Déjà eue ou vaccinée</option><option value="n">Jamais eue, jamais vaccinée</option></select></div>
+<div class="f"><label for="hpv">Papillomavirus (HPV)</label><select id="hpv"><option value="nsp">Je ne sais pas</option><option value="y">Schéma complet</option><option value="n">Pas fait ou incomplet</option></select></div>
+<div class="f"><label for="flu">Grippe cette saison</label><select id="flu"><option value="n">Pas encore</option><option value="y">Déjà faite</option></select></div>
+<div class="f"><label for="cov">Covid-19 cette saison</label><select id="cov"><option value="n">Pas encore</option><option value="y">Déjà fait</option></select></div>
+<div class="f"><label for="pne">Pneumocoque</label><select id="pne"><option value="n">Pas fait ou je ne sais pas</option><option value="y">Déjà fait récemment (vaccin récent)</option></select></div>
+<div class="f"><label for="zon">Zona</label><select id="zon"><option value="n">Pas fait</option><option value="y">Schéma complet (2 doses)</option></select></div></div>
+
+<div class="nav" id="nav"><button class="sec" id="pv" onclick="mv(-1)">Retour</button><button id="nx" onclick="mv(1)">Suivant</button></div>
+<div class="step" data-s="5" hidden><div id="res"></div>
+<div class="nav"><button class="sec" onclick="restart()">Recommencer</button><button onclick="window.print()">Imprimer</button></div></div>
+<section class="legal">
+<details id="rgpd"><summary>🔒 Protection de vos données (RGPD)</summary>
+<p><b>Vos données de santé restent sur votre appareil.</b> Vos réponses sont traitées uniquement dans votre navigateur, le temps du questionnaire. Elles ne sont ni envoyées, ni enregistrées, ni partagées, et la pharmacie n'y a pas accès.</p>
+<ul><li>Aucun cookie, aucun traceur, aucun outil de mesure d'audience.</li><li>Aucune ressource externe (polices, scripts, cartes) : rien ne contacte un tiers.</li><li>Fermer la page ou appuyer sur « Recommencer » efface tout. Imprimer ou montrer l'écran au pharmacien est votre choix.</li></ul>
+<p>Le site est hébergé par GitHub Pages (GitHub, Inc., États-Unis), qui peut conserver des journaux techniques de connexion (adresse IP, date) à des fins de sécurité, indépendamment de vos réponses, selon sa propre politique de confidentialité.</p>
+<p>Responsable du site : Pharmacie des Buttes, Nuits-Saint-Georges. <b>[À COMPLÉTER : nom du titulaire, adresse, e-mail de contact]</b>. Pour toute question, ou pour exercer vos droits (accès, rectification, effacement) sur d'éventuelles données conservées, écrivez à cette adresse. Vous pouvez aussi saisir la CNIL (cnil.fr).</p></details>
+<details><summary>Mentions légales et avertissement</summary>
+<p>Éditeur : Pharmacie des Buttes, 21700 Nuits-Saint-Georges. <b>[À COMPLÉTER : titulaire, n° d'inscription à l'Ordre, adresse, téléphone]</b></p>
+<p>Hébergeur : GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).</p>
+<p>Ce questionnaire est une aide d'information : son résultat est indicatif, établi d'après le calendrier vaccinal 2026 et les compétences des pharmaciens d'officine (à partir de 11 ans, Covid-19 dès 5 ans). Il est confirmé par le pharmacien lors d'un court entretien et ne remplace pas l'avis d'un médecin. Les vaccins du voyageur ne sont pas réalisés en pharmacie. Dernière vérification : octobre 2026.</p></details></section>
+<div class="sig">Pharmacie des Buttes · Nuits-Saint-Georges</div>
+</main>
+<script>
+const $=i=>document.getElementById(i),v=i=>$(i).value,c=i=>$(i).checked;
+let s=1;const T=['Vous','Votre santé','Votre quotidien','Vos vaccins','Résultat'];
+function show(n){s=n;document.querySelectorAll('.step').forEach(e=>e.hidden=e.dataset.s!=n);$('bar').style.width=n*20+'%';$('pn').textContent=n?'Étape '+n+' sur 5 – '+T[n-1]:'';$('nav').hidden=n===5||n===0;$('bar').parentNode.style.visibility=n?'visible':'hidden';$('pv').style.visibility=n===1?'hidden':'visible';$('nx').textContent=n===4?'Voir mes résultats':'Suivant';window.scrollTo({top:0,behavior:'smooth'})}
+function upd(){const a=+v('age');$('pb').hidden=!(v('sex')==='F'&&a>=11&&a<=55)}
+function mv(d){if(s===1&&d>0){const a=v('age');if(a===''||+a<0||+a>120){$('e1').textContent='Indiquez un âge valide.';return}$('e1').textContent=''}
+if(s===4&&d>0){calc();show(5);return}show(s+d)}
+function restart(){document.querySelectorAll('input[type=checkbox]').forEach(e=>e.checked=false);document.querySelectorAll('select').forEach(e=>e.selectedIndex=0);$('age').value='';upd();show(0)}
+function calc(){
+const a=+v('age'),F=v('sex')==='F',pg=F&&a>=11&&a<=55?v('preg'):'non',preg=pg==='oui',imm=c('imm');
+const risk=['resp','card','diab','kid','liver','obes','aspl'].some(i=>$(i)&&c(i)),hcw=c('hcw'),ent=c('ent'),exp=c('exp');
+const L={al:[],ok:[],wa:[],dr:[],ko:[],dn:[]},add=(k,n,d)=>L[k].push([n,d]);
+if(c('fever'))L.al.push('Fièvre ou maladie aiguë : la vaccination est en général reportée à la guérison.');
+if(c('allergy'))L.al.push('Allergie grave à un vaccin : parlez-en à votre médecin avant toute vaccination.');
+if(c('anti'))L.al.push('Anticoagulants ou trouble de la coagulation : signalez-le au pharmacien (précautions pour l\'injection).');
+if(a<18)L.al.push('Mineur : venez accompagné d\'un parent ou titulaire de l\'autorité parentale.');
+if(pg==='nsp')L.al.push('Possible grossesse : faites un test avant tout vaccin « vivant » (ROR, varicelle).');
+if(c('trip'))add('ko','Vaccins du voyage','Fièvre jaune, rage, typhoïde, hépatite A de voyage… : consultez un centre de vaccinations internationales ou votre médecin.');
+if(a<5)add('dr','Tous les vaccins','Avant 5 ans, la vaccination se fait chez le médecin, à la PMI ou chez le pédiatre.');
+else if(a<11){
+ if(v('cov')==='y')add('dn','Covid-19','Déjà fait cette saison.');else add('ok','Covid-19','Possible dès 5 ans, selon la campagne en cours.');
+ add('dr','Autres vaccins','Avant 11 ans, ils se font chez le médecin, à la PMI ou chez le pédiatre.');
+}else{
+ const cg=a>=65||risk||preg||imm||hcw||ent;
+ if(v('flu')==='y')add('dn','Grippe','Déjà faite cette saison.');else add('ok','Grippe','Possible en pharmacie'+(cg?' (vous êtes concerné par la campagne).':'.')+' Le pharmacien rédige l\'ordonnance. '+(a>=65?'Dès 65 ans, un vaccin renforcé est préférable.':''));
+ if(v('cov')==='y')add('dn','Covid-19','Déjà fait cette saison.');else add('ok','Covid-19',(a>=65||risk||preg||imm||hcw?'Recommandé pour vous.':'Possible même sans critère particulier.')+' Selon la campagne en cours.');
+ const keys=[25,45,65,75,85,95],d=v('dtp'),kw=(a>=11&&a<=13)||keys.includes(a);
+ if(preg)add('ok','Coqueluche (dTcaP)','À chaque grossesse, de préférence entre 20 et 36 semaines, pour protéger le bébé.');
+ else if(d==='10p'||d==='nsp'||(kw&&d!=='5'))add('ok',kw&&a<=25?'Rappel dTcaP (diphtérie, tétanos, polio, coqueluche)':'Rappel diphtérie-tétanos-polio','Rappels aux âges clés (11-13, 25, 45, 65 ans puis tous les 10 ans) ou en cas de retard.');
+ else add('dn','Diphtérie-tétanos-polio','Probablement à jour. Prochain rappel à l\'âge clé suivant.');
+ if(a<=26){
+  if(v('hpv')==='y')add('dn','Papillomavirus (HPV)','Schéma complet.');
+  else add('ok','Papillomavirus (HPV)',a<=14?'2 doses entre 11 et 14 ans.':'Rattrapage en 3 doses jusqu\'à 26 ans révolus (remboursé).');
+ }
+ if(a<=24)add('ok','Méningocoque ACWY',a<=14?'Recommandé entre 11 et 14 ans.':'Rattrapage possible jusqu\'à 24 ans.');
+ if(risk||imm)add('wa','Méningocoques ACWY et B','Selon votre situation (rate, déficit du complément…) : à confirmer avec le pharmacien ou le médecin.');
+ if(a<=15)add('wa','Hépatite B','Rattrapage possible jusqu\'à 15 ans si non vaccinée : le pharmacien vérifie le carnet.');
+ if(exp||hcw)add('ok','Hépatite B','Recommandée dans votre situation. Le pharmacien vérifie votre statut.');
+ if(exp)add('ok','Hépatite A','Recommandée selon votre exposition (hors voyage).');
+ const r=v('ror');
+ if(r==='2')add('dn','ROR','2 doses faites.');
+ else if(a<=46){
+  if(preg)add('wa','ROR','Vaccin vivant : impossible pendant la grossesse. À faire après l\'accouchement.');
+  else if(imm)add('dr','ROR','Vaccin vivant : avec des défenses affaiblies, voyez votre médecin, qui décidera et prescrira.');
+  else add('ok','ROR',r==='1'?'Une dose de plus pour compléter le schéma.':'À compléter pour atteindre 2 doses (nés depuis 1980).'+(F?' Contraception conseillée 1 mois après.':''));
+ }
+ if(v('var')==='n'&&a>=12&&(hcw||ent||(F&&a<=50))){
+  if(preg)add('wa','Varicelle','Vaccin vivant : impossible pendant la grossesse.');
+  else if(imm)add('dr','Varicelle','Vaccin vivant : voyez votre médecin.');
+  else add('ok','Varicelle','2 doses à 4-8 semaines d\'intervalle.'+(F?' Contraception conseillée 1 mois après.':''));
+ }else if(v('var')==='nsp'&&a>=12&&(hcw||ent||(F&&a<=50)))add('wa','Varicelle','Antécédent inconnu : une prise de sang peut vérifier votre immunité avant de vacciner.');
+ if(a>=65||(a>=18&&imm)){if(v('zon')==='y')add('dn','Zona','Schéma complet.');else add('ok','Zona (Shingrix)','2 doses, vaccin non vivant.'+(a<65?' Recommandé avec des défenses affaiblies.':' Recommandé dès 65 ans.'))}
+ if(a>=65||(a>=18&&(risk||imm))){if(v('pne')==='y')add('dn','Pneumocoque','Déjà fait récemment.');else add('ok','Pneumocoque','1 dose (Capvaxive de préférence). Le pharmacien vérifie votre historique.')}
+ if(a>=75||(a>=65&&(c('resp')||c('card'))))add('ok','VRS (virus respiratoire)','Recommandé dans votre situation : à confirmer avec le pharmacien.');
+ if(preg)add('wa','VRS (protection du nouveau-né)','Entre 32 et 36 semaines de grossesse, en période de campagne : à confirmer avec le pharmacien ou votre sage-femme.');
+ if(exp)add('wa','Mpox','Uniquement dans certaines pharmacies désignées par l\'ARS : renseignez-vous.');
+}
+const G=[['al','⚠️ À savoir avant de venir',1],['ok','✅ Possible à la pharmacie'],['wa','🔎 À confirmer avec le pharmacien'],['dr','🩺 À voir avec votre médecin'],['ko','⛔ Pas à la pharmacie'],['dn','👍 Déjà à jour']];
+let h='<div class="card"><h2>Vos résultats</h2><p class="hint">Montrez cet écran au pharmacien (ou imprimez-le). Il confirmera avec vous, puis pourra prescrire et réaliser les vaccins possibles.</p></div>';
+G.forEach(g=>{const l=L[g[0]];if(!l.length)return;h+='<div class="g">'+g[1]+'</div>';h+=g[2]?l.map(x=>'<div class="al">'+x+'</div>').join(''):l.map(x=>'<div class="v '+g[0]+'"><b>'+x[0]+'</b><span>'+x[1]+'</span>'+adv(x[0],g[0])+'</div>').join('')});
+$('res').innerHTML=h}
+const W=[[/coqueluche/i,'Les anticorps passent au bébé et le protègent avant ses propres vaccins, quand la maladie est la plus dangereuse.'],[/dTcaP|diphtérie/i,'Le tétanos est rare mais très grave, et une simple plaie suffit à l\'attraper. Les rappels maintiennent la protection.'],[/grippe/i,'Elle peut entraîner des complications graves chez les personnes fragiles. Le vaccin réduit le risque d\'hospitalisation et se renouvelle chaque automne.'],[/covid/i,'Il protège des formes graves, surtout avec l\'âge ou une maladie chronique. La protection diminue avec le temps.'],[/HPV|papillomavirus/i,'Il prévient la plupart des cancers du col de l\'utérus et d\'autres cancers liés à ce virus. Plus efficace avant les premiers rapports.'],[/méningocoque/i,'Maladie rare mais très grave, qui peut évoluer en quelques heures. Adolescents et jeunes adultes sont les plus exposés.'],[/hépatite b/i,'L\'infection peut devenir chronique et entraîner cirrhose ou cancer du foie. Le vaccin est très efficace.'],[/hépatite a/i,'Très contagieuse, elle peut atteindre sévèrement le foie chez l\'adulte.'],[/^ROR/,'La rougeole est très contagieuse et peut avoir des complications graves. La rubéole est dangereuse pour le bébé pendant la grossesse. 2 doses protègent durablement.'],[/varicelle/i,'Plus sévère chez l\'adulte et dangereuse pendant la grossesse. Se vacciner protège aussi les personnes fragiles autour de vous.'],[/zona/i,'Il peut laisser des douleurs pendant des mois, parfois des années. Il est fréquent après 65 ans.'],[/pneumocoque/i,'Première cause de pneumonie bactérienne, avec plus de complications après 65 ans ou avec une maladie chronique.'],[/VRS/,'Ce virus peut provoquer des infections respiratoires sévères chez les personnes âgées et les nouveau-nés.'],[/mpox/i,'Le vaccin protège en cas d\'exposition à risque.']];
+function adv(n,k){if(k!=='ok'&&k!=='wa')return'';const m=W.find(w=>w[0].test(n));return m?'<p class="why">💡 '+m[1]+'</p>':''}
+show(0);upd();
+</script></body></html>
